@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import BeginQuiz from './BeginQuiz';
+import Question from './Question';
+import CompletedQuiz from './CompletedQuiz';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [question, setQuestion] = useState(null);
+  const [answers, setAnswers] = useState(null);
+  const [quizStatus, setQuizStatus] = useState('notTaken');
+
+  // switch (quizStatus) {
+  //   case 'notTaken':
+  //     return <BeginQuiz />;
+  //   case 'inProgress':
+  //     return <Question />;
+  //   case 'completed':
+  //     return <CompletedQuiz />;
+  // }
+
+  if (quizStatus === 'notTaken') {
+    return <BeginQuiz />;
+  } else if (quizStatus === 'inProgress') {
+    return <Question />;
+  } else {
+    return <CompletedQuiz />;
+  }
 }
 
 export default App;
