@@ -6,10 +6,10 @@ function CompletedQuiz({score, numOfQuestions, restartQuiz}) {
     }
 
     return (
-        <div>
-            <h1>Completed Quiz</h1>
+        <div className="container begin-end-container">
+            <h1 class="heading-text">Completed Quiz</h1>
             <p>{score} / {numOfQuestions}</p>
-            <button onClick={handleClick}>Restart Quiz</button>
+            <button className="btn retake-btn" onClick={handleClick}>Restart Quiz</button>
         </div>
     );
 }

@@ -7,9 +7,10 @@ function Answers({answers, adjustScore}) {
     }
 
     return (
-        <div>
+        <div className="answers">
             {answers.map(answer => (
                 <button
+                    className="btn ans-btn"
                     key={answer.choice}
                     id={answer.choice}
                     value={answer.correct}

@@ -6,9 +6,9 @@ function BeginQuiz({setQuizStatus}) {
     }
 
     return (
-        <div>
-            <h1>Begin Quiz</h1>
-            <button onClick={handleClick}>Start Quiz</button>
+        <div className="container begin-end-container">
+            <h1 class="heading-text">Welcome to the Quiz</h1>
+            <button className="btn start-btn" onClick={handleClick}>Start Quiz</button>
         </div>
     );
 }
