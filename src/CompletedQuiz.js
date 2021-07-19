@@ -7,8 +7,8 @@ function CompletedQuiz({score, numOfQuestions, restartQuiz}) {
 
     return (
         <div className="container begin-end-container">
-            <h1 class="heading-text">Completed Quiz</h1>
-            <p>{score} / {numOfQuestions}</p>
+            <h1 className="heading-text">Completed Quiz</h1>
+            <div className={'score-num'}><p>{score} / {numOfQuestions}</p></div>
             <button className="btn retake-btn" onClick={handleClick}>Restart Quiz</button>
         </div>
     );

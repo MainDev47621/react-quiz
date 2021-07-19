@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Answers({answers, adjustScore}) {
+function Answers({answers, adjustScore, setLoaded}) {
     const handleClick = (e) => {
         const correctAns = e.target.value;
         adjustScore(correctAns);

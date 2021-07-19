@@ -6,7 +6,7 @@ import CompletedQuiz from './CompletedQuiz';
 import questions from './questions';
 
 function App() {
-  const [question, setQuestion] = useState(0);
+  const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [quizStatus, setQuizStatus] = useState('ready');
 
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      { quizStatus === 'ready' && <BeginQuiz setQuizStatus={setQuizStatus} /> }
+      { quizStatus === 'ready' && <BeginQuiz setQuizStatus={setQuizStatus} setQuestion={setQuestion} /> }
       { quizStatus === 'inProgress' && <Question question={question} quizStatus={quizStatus} questions={questions} adjustScore={adjustScore} /> }
       { quizStatus === 'completed' && <CompletedQuiz score={score} numOfQuestions={questions.length} restartQuiz={restartQuiz} /> }
     </div>
