@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Answers({answers, adjustScore, setLoaded}) {
+export function Answers({answers, adjustScore}) {
     const handleClick = (e) => {
         const correctAns = e.target.value;
         adjustScore(correctAns);
@@ -21,5 +21,3 @@ function Answers({answers, adjustScore, setLoaded}) {
         </div>
     );
 }
-
-export default Answers;

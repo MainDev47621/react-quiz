@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CompletedQuiz({score, numOfQuestions, restartQuiz}) {
+export function CompletedQuiz({score, numOfQuestions, restartQuiz}) {
     const handleClick = () => {
         restartQuiz();
     }
@@ -13,5 +13,3 @@ function CompletedQuiz({score, numOfQuestions, restartQuiz}) {
         </div>
     );
 }
-
-export default CompletedQuiz;

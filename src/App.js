@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
-import BeginQuiz from './BeginQuiz';
-import Question from './Question';
-import CompletedQuiz from './CompletedQuiz';
-import questions from './questions';
+import { BeginQuiz } from './BeginQuiz';
+import { Question } from './Question';
+import { CompletedQuiz } from './CompletedQuiz';
+import { questions } from './questions';
 
 function App() {
-  const [question, setQuestion] = useState(null);
+  const [question, setQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [quizStatus, setQuizStatus] = useState('ready');
 
@@ -19,7 +19,6 @@ function App() {
   }
 
   const adjustScore = (correct) => {
-    console.log(correct);
     if (correct === 'true') {
       setScore(score => score + 1);
     }

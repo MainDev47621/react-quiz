@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
     {
         number: 1,
         question: 'What is the question 1?',
@@ -107,5 +107,3 @@ const questions = [
         ]
     }
 ];
-
-export default questions;

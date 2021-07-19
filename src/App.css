@@ -104,17 +104,6 @@
     margin-bottom: 50px;
 }
 
-/* .socre-num p {
-    font-size: 10em;
-} */
-
-
-
-/* display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0; */
-
 @media only screen and (max-width: 765px) {
     .answers {
         display: grid;

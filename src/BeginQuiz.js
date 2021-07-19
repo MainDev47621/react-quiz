@@ -1,9 +1,8 @@
 import React from 'react';
 
-function BeginQuiz({setQuizStatus, setQuestion}) {
+export function BeginQuiz({setQuizStatus}) {
     const handleClick = () => {
         setQuizStatus('inProgress');
-        setQuestion(0);
     }
 
     return (
@@ -13,5 +12,3 @@ function BeginQuiz({setQuizStatus, setQuestion}) {
         </div>
     );
 }
-
-export default BeginQuiz;
